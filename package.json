@@ -1,14 +1,14 @@
 {
   "name": "add-react-to-a-website",
   "version": "1.0.0",
-  "description": "",
+  "description": "Add React to a Website",
   "main": "like_button.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch": "npx babel --watch src --out-dir . --presets react-app/prod"
   },
   "keywords": [],
-  "author": "",
+  "author": "Akhirudin Sudiyat",
   "license": "ISC",
   "dependencies": {
     "babel-cli": "^6.26.0",
