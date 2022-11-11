@@ -1,26 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Add React in One Minute</title>
+    <link href="bootstrap.min.css" rel="stylesheet">
+    <link href="fontawesome-free/css/fontawesome.css" rel="stylesheet">
+    <link href="fontawesome-free/css/brands.css" rel="stylesheet">
+    <link href="fontawesome-free/css/solid.css" rel="stylesheet">
   </head>
   <body>
 
-    <h2>Add React in One Minute</h2>
-    <p>This page demonstrates using React with no build tooling.</p>
-    <p>React is loaded as a script tag.</p>
+    <div class="container-fluid">
+      <h2>Add React in One Minute</h2>
+      <p>This page demonstrates using React with no build tooling.</p>
+      <p>React is loaded as a script tag.</p>
 
-    <!-- We will put our React component inside this div. -->
-    <div id="like_button_container"></div>
+      <!-- We will put our React component inside this div. -->
+      <div id="like_button_container"></div>
+    </div>
 
     <!-- Load React. -->
     <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
-    <script src="react.development.js" crossorigin></script>
-    <script src="react-dom.development.js" crossorigin></script>
+    <script src="react.development.js"></script>
+    <script src="react-dom.development.js"></script>
+    <script src="bootstrap.bundle.min.js"></script>
 
     <!-- Load our React component. -->
-    <script src="button.js"></script>
-    <script src="like_button.js"></script>
+    <script src="like_button.js" type="module"></script>
 
   </body>
 </html>

@@ -1,12 +1,12 @@
 'use strict';
 
- class Button extends React.Component {
+export default class Button extends React.Component {
   constructor(props) {
     super(props);
   }
 
   render() {
-    return <button onClick={this.props.onClick}>{this.props.children}</button>;
+    return <button className="btn btn-primary" onClick={this.props.onClick}>{this.props.children}</button>;
   }
 }
 

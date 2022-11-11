@@ -22,7 +22,7 @@ var Button = function (_React$Component) {
     value: function render() {
       return React.createElement(
         'button',
-        { onClick: this.props.onClick },
+        { className: 'btn btn-primary', onClick: this.props.onClick },
         this.props.children
       );
     }
@@ -30,5 +30,8 @@ var Button = function (_React$Component) {
 
   return Button;
 }(React.Component);
+
+export default Button;
+
 
 Button.defaultProps = { children: 'I am a button' };

@@ -8,6 +8,8 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
+import Button from './button.js';
+
 var LikeButton = function (_React$Component) {
   _inherits(LikeButton, _React$Component);
 
@@ -17,24 +19,29 @@ var LikeButton = function (_React$Component) {
     var _this = _possibleConstructorReturn(this, (LikeButton.__proto__ || Object.getPrototypeOf(LikeButton)).call(this, props));
 
     _this.state = { liked: false };
+    _this.handleClick = _this.handleClick.bind(_this);
     return _this;
   }
 
   _createClass(LikeButton, [{
+    key: 'handleClick',
+    value: function handleClick(e) {
+      e.preventDefault();
+
+      this.setState({ liked: true });
+    }
+  }, {
     key: 'render',
     value: function render() {
-      var _this2 = this;
-
       if (this.state.liked) {
         return 'You liked this.';
       }
 
       return React.createElement(
         Button,
-        { onClick: function onClick() {
-            return _this2.setState({ liked: true });
-          } },
-        'Like'
+        { onClick: this.handleClick },
+        React.createElement('i', { className: 'fa-solid fa-thumbs-up' }),
+        ' Like'
       );
     }
   }]);
@@ -42,8 +49,7 @@ var LikeButton = function (_React$Component) {
   return LikeButton;
 }(React.Component);
 
-var domContainer = document.querySelector('#like_button_container');
-var root = ReactDOM.createRoot(domContainer);
+var root = ReactDOM.createRoot(document.getElementById('like_button_container'));
 root.render(React.createElement(
   React.StrictMode,
   null,

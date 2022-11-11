@@ -1,9 +1,18 @@
 'use strict';
 
+import Button from './button.js';
+
 class LikeButton extends React.Component {
   constructor(props) {
     super(props);
     this.state = { liked: false };
+    this.handleClick = this.handleClick.bind(this);
+  }
+
+  handleClick(e) {
+    e.preventDefault();
+
+    this.setState({ liked: true });
   }
 
   render() {
@@ -12,15 +21,14 @@ class LikeButton extends React.Component {
     }
 
     return (
-      <Button onClick={() => this.setState({ liked: true }) }>
-        Like
+      <Button onClick={this.handleClick }>
+        <i className="fa-solid fa-thumbs-up"></i> Like
       </Button>
     );
   }
 }
 
-let domContainer = document.querySelector('#like_button_container');
-const root = ReactDOM.createRoot(domContainer);
+const root = ReactDOM.createRoot(document.getElementById('like_button_container'));
 root.render(
   <React.StrictMode>
     <LikeButton />
