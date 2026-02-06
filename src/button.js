@@ -10,4 +10,4 @@ export default class Button extends React.Component {
   }
 }
 
-Button.defaultProps = {children: 'I am a button'};
+Button.defaultProps = {children: "I'm a button"};
