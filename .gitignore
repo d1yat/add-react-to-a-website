@@ -103,5 +103,4 @@ dist
 # TernJS port file
 .tern-port
 
-button.js
-like_button.js
+

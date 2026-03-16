@@ -18,11 +18,11 @@ var Button = function (_React$Component) {
   }
 
   _createClass(Button, [{
-    key: 'render',
+    key: "render",
     value: function render() {
       return React.createElement(
-        'button',
-        { className: 'btn btn-primary', onClick: this.props.onClick },
+        "button",
+        { className: "btn btn-primary", onClick: this.props.onClick },
         this.props.children
       );
     }
@@ -34,4 +34,4 @@ var Button = function (_React$Component) {
 export default Button;
 
 
-Button.defaultProps = { children: 'I am a button' };
+Button.defaultProps = { children: "I'm a button" };
