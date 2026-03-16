@@ -11,9 +11,14 @@ function MyButton() {
     setCount(count + 1);
   }
 
-  return <button className='btn btn-primary' onClick={onButtonClick}>
-    <i className='fa-solid fa-thumbs-up'></i> Clicked {count} times
-    </button>
+  return (
+    <div className='mb-2'>
+
+      <Button onClick={onButtonClick}>
+        <i className='fa-solid fa-thumbs-up'></i> Clicked {count} times
+      </Button>
+    </div>
+  );
 }
 
 function App() {
@@ -23,33 +28,7 @@ function App() {
       <MyButton />
       <MyButton />
     </div>
-  )
-}
-
-class LikeButton extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { liked: false };
-    this.handleClick = this.handleClick.bind(this);
-  }
-
-  handleClick(e) {
-    e.preventDefault();
-
-    this.setState({ liked: true });
-  }
-
-  render() {
-    if (this.state.liked) {
-      return 'You liked this.';
-    }
-
-    return (
-      <Button onClick={this.handleClick }>
-        <i className="fa-solid fa-thumbs-up"></i> Like
-      </Button>
-    );
-  }
+  );
 }
 
 const root = ReactDOM.createRoot(document.getElementById('like_button_container'));
