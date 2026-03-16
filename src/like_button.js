@@ -30,7 +30,9 @@ function App() {
   );
 }
 
-const root = ReactDOM.createRoot(document.getElementById('like_button_container'));
+const container = document.getElementById('like_button_container');
+const root = ReactDOM.createRoot(container);
+
 root.render(
   <React.StrictMode>
     <App />
