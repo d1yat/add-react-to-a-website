@@ -13,7 +13,6 @@ function MyButton() {
 
   return (
     <div className='mb-2'>
-
       <Button onClick={onButtonClick}>
         <i className='fa-solid fa-thumbs-up'></i> Clicked {count} times
       </Button>
